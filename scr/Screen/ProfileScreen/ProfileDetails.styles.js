@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F7F7FB',
+    backgroundColor: '#ecaddeff',
     paddingHorizontal: 20,
   },
 
@@ -52,25 +52,27 @@ const styles = StyleSheet.create({
 
   statBox: {
     width: '30%',
-    backgroundColor: '#F1F2F6',
+    backgroundColor: '#b69efcff',
     borderRadius: 20,
     paddingVertical: 18,
     alignItems: 'center',
   },
 
   activeBox: {
-    backgroundColor: '#C7B9F2',
+   backgroundColor: '#b69efcff',
   },
 
   statNumber: {
     fontSize: 22,
     fontWeight: '700',
+  color: '#960165ff',
   },
 
   statLabel: {
     fontSize: 13,
     marginTop: 4,
-    color: '#6B7280',
+    fontWeight: 'bold',
+    color: '#e911a1ff',
   },
 
   settingsCard: {

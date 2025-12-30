@@ -52,7 +52,7 @@ const Login = ({ setIsLoggedIn }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>CRYNIX</Text>
-      <Text style={styles.subtitle}>AI-powered baby cry understanding</Text>
+      <Text style={styles.subtitle}>--AI-powered baby cry understanding--</Text>
 {loading ? (
   <>
     <ActivityIndicator size="large" color="#4285F4" />

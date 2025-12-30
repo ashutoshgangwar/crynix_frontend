@@ -64,22 +64,25 @@ const BabyDetails = ({setHasBaby}) => {
 
       setLoading(false);
 
-     if (res.status === 200 || res.status === 201) {
-  Alert.alert(
-    'Success',
-    'Baby profile saved 🎉',
-    [
-      {
-        text: 'OK',
-        onPress: () => {
-          setHasBaby(true);
-        },
-      },
-    ],
-    { cancelable: false }
-  );
-}
- else {
+      if (res.status === 200 || res.status === 201) {
+        // console.log('baby details uploade', res.data)
+        const babyId = res.data.baby._id; // get babyId from response
+        await AsyncStorage.setItem('babyId', babyId); // save to AsyncStorage
+        // console.log('Baby ID saved:', babyId);
+        Alert.alert(
+          'Success',
+          'Baby profile saved 🎉',
+          [
+            {
+              text: 'OK',
+              onPress: () => {
+                setHasBaby(true);
+              },
+            },
+          ],
+          {cancelable: false},
+        );
+      } else {
         console.log('API ERROR:', res.data);
         Alert.alert('Error', 'Failed to save baby profile');
       }
